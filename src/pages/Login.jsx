@@ -25,22 +25,53 @@ function Login() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-50">
-      {/* Header Web */}
-      <header className="w-full py-4 mb-8 bg-blue-700 shadow-lg fixed top-0 left-0">
+      {/* Header Web - Tetap di Atas */}
+      <header className="w-full py-4 mb-8 bg-blue-700 shadow-lg fixed top-0 left-0 z-10">
         <h1 className="text-3xl font-extrabold text-white text-center tracking-wider">
           Monitoring Produksi
         </h1>
       </header>
-      {/* Container Form Login */}
-      <div className="flex items-center justify-center min-h-screen">
+
+      {/* Main Content Container (Dibagi 2 Kolom) */}
+      <div className="flex items-center justify-center w-full max-w-5xl mx-auto min-h-screen pt-16">
+        {/* Kolom 1: Copywriting dan Animasi */}
+        <div className="hidden lg:flex flex-col justify-center p-12 w-1/2 h-full bg-blue-600 rounded-l-2xl shadow-xl transform transition duration-500 ease-in-out hover:shadow-2xl">
+          <h2 className="text-4xl font-black text-white mb-4 animate-fade-in-down">
+            📊 Kendalikan Operasi Anda
+          </h2>
+          <p className="text-white text-lg leading-relaxed mb-6 opacity-90 animate-fade-in-down delay-100">
+            Sistem **Monitoring Produksi** terpadu untuk visibilitas real-time,
+            analisis performa, dan pengambilan keputusan yang cepat di lantai
+            produksi.
+          </p>
+          <ul className="text-white space-y-3 opacity-95 animate-fade-in-down delay-200">
+            <li className="flex items-center">
+              <span className="text-yellow-300 mr-2 text-xl">✓</span> Pantau
+              efisiensi mesin secara langsung.
+            </li>
+            <li className="flex items-center">
+              <span className="text-yellow-300 mr-2 text-xl">✓</span> Analisis
+              data historis untuk peningkatan berkelanjutan.
+            </li>
+            <li className="flex items-center">
+              <span className="text-yellow-300 mr-2 text-xl">✓</span> Akses
+              laporan spesifik peran (Admin & Leader).
+            </li>
+          </ul>
+        </div>
+
+        {/* Kolom 2: Form Login */}
         <form
           onSubmit={handleLogin}
-          className="bg-white p-10 rounded-xl shadow-2xl w-full max-w-sm transform hover:scale-[1.02] transition duration-300 ease-in-out border border-blue-100"
+          className="bg-white p-10 rounded-xl lg:rounded-l-none shadow-2xl w-full max-w-sm lg:w-1/2 lg:max-w-none transform transition duration-300 ease-in-out border border-gray-200 animate-slide-in-right"
         >
           {/* Judul Form */}
-          <h2 className="text-3xl font-extrabold mb-8 text-center text-blue-800">
+          <h2 className="text-3xl font-extrabold mb-2 text-center text-blue-800">
             Masuk Akun
           </h2>
+          <p className="text-center text-gray-500 mb-8">
+            Akses dashboard monitoring produksi Anda.
+          </p>
 
           {/* Input Email */}
           <div className="mb-5">
@@ -96,6 +127,35 @@ function Login() {
           </button>
         </form>
       </div>
+
+      {/* ⚠️ PENTING: Anda perlu menambahkan styling animasi berikut ke file CSS global/indeks Anda jika tidak menggunakan Tailwind JIT/Custom Config */}
+      {/* Ini adalah animasi keyframe dasar untuk interaktivitas */}
+      {/*
+      <style>
+        .animate-fade-in-down {
+          animation: fadeInDown 0.5s ease-out forwards;
+          opacity: 0;
+        }
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        .animate-slide-in-right {
+          animation: slideInRight 0.6s ease-out forwards;
+        }
+        
+        @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInRight {
+          from { opacity: 0; transform: translateX(20px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+      </style>
+      */}
     </div>
   )
 }
