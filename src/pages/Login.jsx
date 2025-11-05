@@ -37,10 +37,10 @@ function Login() {
         {/* Kolom 1: Copywriting dan Animasi */}
         <div className="hidden lg:flex flex-col justify-center p-12 w-1/2 h-full bg-blue-600 rounded-l-2xl shadow-xl transform transition duration-500 ease-in-out hover:shadow-2xl">
           <h2 className="text-4xl font-black text-white mb-4 animate-fade-in-down">
-            📊 Kendalikan Operasi Anda
+            Kendalikan Operasi Anda
           </h2>
           <p className="text-white text-lg leading-relaxed mb-6 opacity-90 animate-fade-in-down delay-100">
-            Sistem **Monitoring Produksi** terpadu untuk visibilitas real-time,
+            Sistem Monitoring Produksi terpadu untuk visibilitas real-time,
             analisis performa, dan pengambilan keputusan yang cepat di lantai
             produksi.
           </p>
@@ -70,7 +70,7 @@ function Login() {
             Masuk Akun
           </h2>
           <p className="text-center text-gray-500 mb-8">
-            Akses dashboard monitoring produksi Anda.
+            Akses dashboard monitoring produksi.
           </p>
 
           {/* Input Email */}
